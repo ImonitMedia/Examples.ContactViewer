@@ -23,6 +23,9 @@ export const ContactCard = ({ contact, expanded, onHandleLoadContacts, setToExpa
 
   async function handleDeleteContact(e: MouseEvent<HTMLElement>) {
     e.preventDefault();
+
+    // Progressive work would replace this with a modal popup
+    // eslint-disable-next-line no-alert
     const confirmDelete = window.confirm('Are you sure? This action cannot be undone');
     if (confirmDelete) {
       const response = await deleteContact(id);
